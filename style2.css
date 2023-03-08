@@ -1,0 +1,144 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+	font-family: 'verdana';
+	font-size: 16px;
+}
+@font-face {
+    font-family: 'lunaregular';/* obtenu avec FontSquirrel */
+    src: url('./fonts/luna-webfont.woff2') format('woff2'),
+         url('./fonts/luna-webfont.woff') format('woff'),
+         url('./fonts/luna.ttf');
+    font-weight: normal;/* rend plus gras ou plus fin, mais normal ne mofifie rien */
+    font-style: normal;/* force un comportement pour la typo, mais normal ne force rien */
+
+}
+#hero{
+	background: url('fonds.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-bottom: 1%;
+}
+nav{
+	background-color: rgba(0, 0, 0, 0.3);
+	text-align: center;
+	padding: 20px;
+}
+#bandeau{
+	margin-top: 10%;
+	margin-bottom: 10%;
+	background-color:rgba(255, 255, 255, 0.7);
+}
+#contenu{
+	text-align: center;
+	padding: 5%;
+}
+#contenu a{
+	color: red;
+	border: 1px solid red;
+	border-radius: 15px;
+	padding: 20px;
+	transition: ease 1s;
+}
+#contenu a:hover{
+	color: white;
+	background-color: rgba(178, 32, 19, 0.8);
+}
+#contenu img:hover{
+	transform: rotate(360deg) scale(1.5);
+}
+#contenu img{
+	transition: 0.2s;
+}
+h1{
+	color:black;/*rgb(0,0,0) ou #000 */
+	font-size:32px;
+	font-family: 'lunaregular', Verdana, Arial, Helvetica,  sans-serif;
+}
+h2{
+	color:black;
+	font-family: 'Lobster', cursive;/* prolice provenant de Google Fonts */
+}
+h3{
+	color:black;
+	font-size:16px;
+}
+a{
+	color:white;
+	text-decoration: none;
+	padding: 20px;
+	transition: 1s;
+}
+a:hover{ /* pseudo-classe */
+	color:red;
+}
+#apropos{ 
+	display: flex;
+}
+#apropos_image{
+	padding: 20px; 
+	flex: 1;
+}
+#apropos_image img{ 
+	flex: 1;
+	max-width: 100%; /* l'image prend au max la largeur de son contenant i.e. 100% du tiers de la page */
+}
+#apropos_texte{
+	padding: 20px; 
+	flex: 2;
+	text-align: justify;
+}
+#conseils_suggestions{ /* cette section est maintenant un contenant flex*/
+	display: flex;
+	background-color: #666; /* fond gris*/
+	color: white; /* texte blanc */
+	padding: 20px;
+	text-align: center; /* pour centrer les icônes */
+}
+.conseils_item p{
+	text-align: justify;
+	padding: 20px;
+}
+/* Déclaration CSS d'une Media Query */
+@media screen and (max-width: 414px){ /* c'est le point de rupture */
+	#apropos{
+		color: red;
+	} /* on referme la déclaration #apropos */
+} /* ici, on referme le media query */
+@media screen and (max-width: 414px){ /* c'est le point de rupture */
+	#apropos{
+		flex-direction: column; /* pour afficher en colonne */
+	} /* on referme la déclaration #apropos */
+	#conseils_suggestions{
+		flex-direction: column; /* pour afficher en colonne */
+	} /* on referme la déclaration #conseils_suggestions */
+} /* ici, on referme le media query */
+
+/*
+#conseils_suggestions{
+		flex-direction: column; /* pour afficher en colonne */
+	} /* on referme la déclaration #conseils_suggestions */
+	/*nav a{
+		display: block;
+		padding: 10px;
+	} /* on referme la déclaration nav a */
+} /* ici, on referme le media query */
+
+footer{
+		display: flex;
+		justify-content: center;
+	}
+footer a{
+		color: blue;
+	}
+footer a:hover{
+		color: #e74c3c;
+	}
+.social{
+		display: inline-flex;
+		justify-content: center;
+		padding: 20px;
+	}
+
